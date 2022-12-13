@@ -3,7 +3,7 @@
 Here are the packages , i used - 
 1) dotenv - To protect our sensitive information.
 2) multer - To get the multipart/formData from client side to our backend.
-3) mysql2 - To our backend to our MYSQL database.
+3) mysql2 - To connect our backend to our MYSQL database.
 
 API Endpoints details -
 1) localhost:5000/register-patient/:psychiatristId - this endpoint will used by psychiatrist to register patients .
