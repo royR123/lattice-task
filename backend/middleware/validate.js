@@ -16,6 +16,7 @@ const deleteFile = (req) => {
 
 const validate = (req,res,next) => {
     const regExEmail = (/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/);
+    const regExNumber = (/^[+]{0,1}[1-9]{1,3}[0-9]{10}$/)
     try {
         const { name , address , password , phone_no , email } = req.body;
         console.log(req.body);
@@ -23,6 +24,10 @@ const validate = (req,res,next) => {
         if(!email.match(regExEmail)){
             deleteFile(req);
             return res.status(400).json('Email is not valid')
+        }
+        if(!phone_no.match(regExNumber)){
+            deleteFile(req);
+            return res.status(400).json('number is not valid')
         }
         if(address.length < 10){
             deleteFile(req);
