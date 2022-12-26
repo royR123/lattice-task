@@ -5,9 +5,6 @@ const path = require('path');
 
 app.use(express.json());
 
-app.use(express.urlencoded({ extended: true }));
-
-
 const multer = require('multer');
 
 const {db} = require('./config/db');
